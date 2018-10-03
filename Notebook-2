@@ -1,0 +1,31 @@
+/*ejercicio 3_1*/
+/*SELECT title FROM film;*/
+
+/*ejercicio 3_2*/
+/*SELECT DISTINCT release_year FROM sakila.film GROUP BY release_year;*/
+
+/*ejercicio 3_3*/
+/*SELECT title FROM sakila.film
+WHERE 
+    rental_duration > 4;
+GO*/
+
+/*ejercico 3_4*/
+/*
+SELECT customer_id,rental_id,amount,payment_date FROM sakila.payment
+WHERE
+    payment_date BETWEEN cast('2005-07-01'as date) AND cast('2005-08-01'as date);
+GO*/
+
+/*ejercicio 4_1*/
+/*SELECT count(*) as total FROM sakila.customer;*/
+
+/*ejercicio 4_2*/
+/*SELECT count(*) FROM sakila.rental GROUP BY customer_id;*/
+
+/*ejercicio 4_3*/
+/*SELECT MAX(total) FROM (SELECT customer_id,count(*) as total FROM sakila.rental GROUP BY customer_id) as t1;*/
+/*numero maximo de arriendos de un cliente de todos los clientes*/
+
+/*ejercicio 4_5*/
+/*SELECT staff_id,count(*) AS total FROM sakila.payment GROUP BY staff_id;*/
