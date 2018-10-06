@@ -50,7 +50,7 @@ SELECT title,name AS lang FROM sakila.film AS t1 INNER JOIN sakila.language AS t
 
 /*ejercicio 5_2*/
 /*
-SELECT first_name AS "NOMBRE", last_name AS "APELLIDO", rental_id, title, inventory_id
+SELECT first_name AS "NOMBRE", last_name AS "APELLIDO", rental_id, title, t3.inventory_id
 FROM sakila.customer AS t1
 INNER JOIN sakila.film AS t2 ON t2.title = "CHICAGO NORTH"
 INNER JOIN sakila.inventory AS t4 ON t4.film_id = t2.film_id
